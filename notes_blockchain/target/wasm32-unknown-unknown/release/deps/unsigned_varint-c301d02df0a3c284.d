@@ -1,0 +1,10 @@
+/workspaces/3dvr-decentralized-notes/notes_blockchain/target/wasm32-unknown-unknown/release/deps/libunsigned_varint-c301d02df0a3c284.rmeta: /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/decode.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/encode.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/io.rs
+
+/workspaces/3dvr-decentralized-notes/notes_blockchain/target/wasm32-unknown-unknown/release/deps/libunsigned_varint-c301d02df0a3c284.rlib: /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/decode.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/encode.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/io.rs
+
+/workspaces/3dvr-decentralized-notes/notes_blockchain/target/wasm32-unknown-unknown/release/deps/unsigned_varint-c301d02df0a3c284.d: /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/decode.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/encode.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/io.rs
+
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/lib.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/decode.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/encode.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unsigned-varint-0.8.0/src/io.rs:

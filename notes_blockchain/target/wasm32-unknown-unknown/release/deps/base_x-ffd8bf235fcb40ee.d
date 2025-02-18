@@ -1,0 +1,11 @@
+/workspaces/3dvr-decentralized-notes/notes_blockchain/target/wasm32-unknown-unknown/release/deps/libbase_x-ffd8bf235fcb40ee.rmeta: /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/alphabet.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/bigint.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/decoder.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/encoder.rs
+
+/workspaces/3dvr-decentralized-notes/notes_blockchain/target/wasm32-unknown-unknown/release/deps/libbase_x-ffd8bf235fcb40ee.rlib: /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/alphabet.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/bigint.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/decoder.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/encoder.rs
+
+/workspaces/3dvr-decentralized-notes/notes_blockchain/target/wasm32-unknown-unknown/release/deps/base_x-ffd8bf235fcb40ee.d: /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/alphabet.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/bigint.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/decoder.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/encoder.rs
+
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/lib.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/alphabet.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/bigint.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/decoder.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/base-x-0.2.11/src/encoder.rs:

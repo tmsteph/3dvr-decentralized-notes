@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decentralized Notes</title>
+</head>
+<body>
+    <h1>Decentralized Notes</h1>
+    <input type="text" id="noteInput" placeholder="Write a note...">
+    <button onclick="addNote()">Add Note</button>
+    <button onclick="showNotes()">Show Notes</button>
+    <ul id="notesList"></ul>
+
+    <script type="module">
+        import init, { Blockchain } from './pkg/notes_blockchain.js';
+
+        let blockchain;
+
+        async function start() {
+            await init();
+            blockchain = new Blockchain();
+        }
+
+        function addNote() {
+            const noteInput = document.getElementById("noteInput").value;
+            blockchain.add_note(noteInput);
+            document.getElementById("noteInput").value = "";
+            alert("Note added!");
+        }
+
+        function showNotes() {
+            let notes = blockchain.decrypt_notes();
+            document.getElementById("notesList").innerHTML = notes.map(note => "<li>" + note + "</li>").join('');
+        }
+
+        start();
+    </script>
+</body>
+</html>
