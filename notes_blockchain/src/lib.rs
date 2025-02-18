@@ -3,9 +3,10 @@ use sha2::{Sha256, Digest};
 use aes::Aes128;
 use block_modes::{BlockMode, Cbc};
 use block_modes::block_padding::Pkcs7;
-use rand::Rng;
+use getrandom::getrandom;
 use serde::{Serialize, Deserialize};
 use base64::{encode, decode};
+use js_sys;
 
 type Aes128Cbc = Cbc<Aes128, Pkcs7>;
 
@@ -29,7 +30,10 @@ pub struct Blockchain {
 impl Blockchain {
     #[wasm_bindgen(constructor)]
     pub fn new() -> Blockchain {
-        let secret_key = rand::thread_rng().gen::<[u8; 16]>().to_vec();
+        let mut secret_key = [0u8; 16];
+        getrandom(&mut secret_key).expect("Failed to generate key");
+        let secret_key = secret_key.to_vec();
+
         let genesis_note = Note {
             id: "genesis".to_string(),
             encrypted_content: "Genesis Block".to_string(),
@@ -37,6 +41,7 @@ impl Blockchain {
             previous_hash: String::new(),
             hash: String::new(),
         };
+
         Blockchain {
             chain: vec![genesis_note],
             secret_key,
@@ -44,20 +49,22 @@ impl Blockchain {
     }
 
     pub fn encrypt_content(&self, content: &str) -> String {
-        let cipher = Aes128Cbc::new_from_slices(&self.secret_key, &self.secret_key).unwrap();
+        let cipher = Aes128Cbc::new_from_slices(&self.secret_key, &self.secret_key)
+            .expect("Failed to create AES cipher");
         let encrypted_data = cipher.encrypt_vec(content.as_bytes());
         encode(encrypted_data)
     }
 
     pub fn decrypt_content(&self, encrypted: &str) -> String {
-        let cipher = Aes128Cbc::new_from_slices(&self.secret_key, &self.secret_key).unwrap();
+        let cipher = Aes128Cbc::new_from_slices(&self.secret_key, &self.secret_key)
+            .expect("Failed to create AES cipher");
         let decrypted_data = cipher.decrypt_vec(&decode(encrypted).unwrap()).unwrap();
         String::from_utf8(decrypted_data).unwrap()
     }
 
     pub fn add_note(&mut self, content: String) {
         let encrypted_content = self.encrypt_content(&content);
-        let timestamp = js_sys::Date::now() as u64;
+        let timestamp = js_sys::Date::now().floor() as u64;
         let previous_hash = self.chain.last().unwrap().hash.clone();
         
         let mut hasher = Sha256::new();

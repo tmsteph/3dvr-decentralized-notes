@@ -29,7 +29,7 @@
 
         function showNotes() {
             let notes = blockchain.decrypt_notes();
-            document.getElementById("notesList").innerHTML = notes.map(note => "<li>" + note + "</li>").join('');
+            document.getElementById("notesList").innerHTML = notes.map(note => `<li>${note}</li>`).join('');
         }
 
         start();

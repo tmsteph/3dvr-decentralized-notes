@@ -7,13 +7,14 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-wasm-bindgen = "0.2"
-rand = "0.8"
-aes = "0.7"
-block-modes = "0.8"
+wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
+rand = { version = "0.8", features = ["getrandom"] }
+getrandom = { version = "0.2", features = ["js"] } 
+aes = { version = "0.7", default-features = false, features = ["alloc"] }
+block-modes = { version = "0.8", default-features = false, features = ["alloc"] }
 sha2 = "0.10"
 hex = "0.4"
 base64 = "0.21"
-libp2p = { version = "0.52", features = ["wasm-bindgen"] }
-serde = { version = "1.0", features = ["derive"] }
+serde = { version = "1.0", features = ["derive", "serde_derive"] }
 serde_json = "1.0"
+js-sys = "0.3"
