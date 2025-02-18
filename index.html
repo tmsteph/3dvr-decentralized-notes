@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Decentralized Notes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Decentralized Notes</h1>
-    <input type="text" id="noteInput" placeholder="Write a note...">
-    <button onclick="addNote()">Add Note</button>
-    <button onclick="showNotes()">Show Notes</button>
-    <ul id="notesList"></ul>
+    <header>
+        <h1>📝 Decentralized Notes</h1>
+        <button id="darkModeToggle">🌙</button>
+    </header>
+
+    <div class="container">
+        <input type="text" id="noteInput" placeholder="Write a note...">
+        <button onclick="addNote()">➕ Add Note</button>
+        <button onclick="showNotes()">📜 Show Notes</button>
+        <ul id="notesList"></ul>
+    </div>
 
     <script type="module">
         import init, { Blockchain } from './pkg/notes_blockchain.js';
@@ -22,17 +31,32 @@
 
         function addNote() {
             const noteInput = document.getElementById("noteInput").value;
+            if (noteInput.trim() === "") {
+                alert("Please enter a note.");
+                return;
+            }
             blockchain.add_note(noteInput);
             document.getElementById("noteInput").value = "";
-            alert("Note added!");
+            alert("✅ Note added!");
         }
 
         function showNotes() {
             let notes = blockchain.decrypt_notes();
-            document.getElementById("notesList").innerHTML = notes.map(note => `<li>${note}</li>`).join('');
+            const notesList = document.getElementById("notesList");
+            notesList.innerHTML = "";
+            notes.forEach(note => {
+                let li = document.createElement("li");
+                li.textContent = note;
+                notesList.appendChild(li);
+            });
         }
+
+        document.getElementById("darkModeToggle").addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+        });
 
         start();
     </script>
 </body>
 </html>
+
